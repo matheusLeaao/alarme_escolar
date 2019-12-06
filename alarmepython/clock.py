@@ -1,5 +1,5 @@
 import datetime
-from pygame import mixer
+import pygame
 
 horas = int(input("Que horas tocar o alarme?\n"))
 minuto = int(input("Que minuto tocar o alarme?\n"))
@@ -12,4 +12,9 @@ print("Aguardando")
 
 while True:
     if(horas == datetime.datetime.now().hour and minuto == datetime.datetime.now().minute):
-       pygame.mixer.music.queue('sinal.mp3')
+        pygame.init()
+        pygame.mixer.music.load('sinal.mp3')
+        pygame.mixer.music.play()
+        pygame.event.wait()
+        pygame.stop()
+        break
