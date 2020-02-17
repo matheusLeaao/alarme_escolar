@@ -1,3 +1,9 @@
+#!bin/bash
+# Programa com intuíto de tocar um alarme conforme horário definido 
+#
+# Github : matheusLeaao  <https://github.com/matheusLeaao>
+# @author Matheus Leão <mathegiov@hotmail.com>
+
 import datetime
 import pygame
 
